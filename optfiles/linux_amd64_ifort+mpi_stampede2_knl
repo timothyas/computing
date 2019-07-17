@@ -26,6 +26,9 @@ NOOPTFLAGS='-O1 -fp-model precise'
 FFLAGS="$FFLAGS -W0 -WB -convert big_endian -assume byterecl"
 FFLAGS="$FFLAGS -fPIC"
 
+# --- get 132 lines for 21st century compiling
+FFLAGS="$FFLAGS $EXTENDED_SRC_FLAG"
+
 if test "x$IEEE" = x ; then
     FOPTIM="-align -traceback -xMIC-AVX512 -O2 -ip -ftz -fp-model precise"
     NOOPTFILES='seaice_growth.F calc_oce_mxlayer.F fizhi_lsm.F fizhi_clockstuff.F'

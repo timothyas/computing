@@ -50,6 +50,9 @@ NOOPTFLAGS='-O1 -g -xCORE-AVX2'
 
 FFLAGS="$FFLAGS -W0 -WB -convert big_endian -assume byterecl"
 FFLAGS="$FFLAGS -fPIC -mcmodel=large -shared-intel"
+
+# --- get 132 lines for 21st century compiling
+FFLAGS="$FFLAGS $EXTENDED_SRC_FLAG"
 #- might want to use '-r8' for fizhi pkg:
 #FFLAGS="$FFLAGS -r8"
 

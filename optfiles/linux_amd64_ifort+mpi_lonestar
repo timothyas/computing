@@ -56,3 +56,6 @@ else
 	INCLUDES="${INCLUDES} -I${TACC_NETCDF_INC}"
 	LIBS="${LIBS} -L${TACC_NETCDF_LIB} -lnetcdf -lnetcdff"
 fi
+
+# --- get 132 lines for 21st century compiling
+FFLAGS="$FFLAGS $EXTENDED_SRC_FLAG"

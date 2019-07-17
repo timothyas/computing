@@ -52,3 +52,6 @@ fi
 #- For really big executable (> 2 GB), uncomment following 2 lines
 #FFLAGS="$FFLAGS -mcmodel=medium -shared-intel"
 #CFLAGS="$CFLAGS -mcmodel=medium -shared-intel"
+
+# --- get 132 lines for 21st century compiling
+FFLAGS="$FFLAGS $EXTENDED_SRC_FLAG"
